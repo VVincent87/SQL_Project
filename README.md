@@ -2,6 +2,7 @@
 A boilerplace wich respect the MVC model
 
 ## Folder
+test
 
 ### /controller
 Put all controller files in this folder 
