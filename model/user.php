@@ -5,7 +5,7 @@ function addUser($pdo, $data){
     $lastname = $data['lastname'];
     $email = $data['email'];
 
-    var_dump($data)
+    var_dump($data);
 
     $sql = "
         INSERT INTO user (first_name, last_name, email)
@@ -29,7 +29,7 @@ function addUser($pdo, $data){
     }
 }
 
-function getAllUsers() {
+/* function getAllUsers() {
 
     $sql = "
         SELECT *
@@ -59,4 +59,4 @@ $stmt -> execute();
 // foreach ($allUsers as $user) {
 //    var_dump($user);
 //}
-}
+} */

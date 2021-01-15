@@ -1,7 +1,7 @@
 <?php
 
 if(isset($POST['firstname'])){
-    addUser($pdo, $POST);
+    addUser($pdo, $_POST);
 }
 
 include '../view/signin_view.php';

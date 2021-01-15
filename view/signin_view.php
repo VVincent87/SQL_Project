@@ -1,11 +1,11 @@
-<h1>Formulaire d'inscrption</h1>
+<h1>Bonjour, merci de vous identifier!</h1>
 
 <form action="/signin" method="post" >
 
-    <label for="firstname">First Name:</label>
+    <label for="firstname">Prénom:</label>
     <input id="firstname" name="firstname" type="text">
 
-    <label for="lastname">Last Name:</label>
+    <label for="lastname">Nom:</label>
     <input id="lastname" name="lastname" type="text">
 
     <label for="email">Email:</label>
