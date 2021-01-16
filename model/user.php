@@ -4,12 +4,16 @@ function addUser($pdo, $data){
     $firstname = $data['firstname'];
     $lastname = $data['lastname'];
     $email = $data['email'];
+    $password = $data['password'];
+    $phone = $data['phone'];
+
+    
 
     var_dump($data);
 
     $sql = "
-        INSERT INTO user (first_name, last_name, email)
-        VALUES (:firstname, :lastname, :email)
+        INSERT INTO client (first_name, last_name, email, password, phone)
+        VALUES (:firstname, :lastname, :email, :password, :phone)
     ";
 
     $stmt = $pdo -> prepare($sql);
@@ -19,7 +23,9 @@ function addUser($pdo, $data){
             [
                 "firstname" => $firstname,
                 "lastname" => $lastname,
-                "email" => $email
+                "email" => $email,
+                "password" => $password,
+                "phone" => $phone
             ]
         );
         
@@ -29,34 +35,4 @@ function addUser($pdo, $data){
     }
 }
 
-/* function getAllUsers() {
-
-    $sql = "
-        SELECT *
-        FROM user
-    ";
-
-$stmt = $pdo -> prepare($sql);
-
-    try {
-        $stmt->execute();
-        $allUsers = $stmt->fetchAll();
-    } catch (Exception $e) {
-        $pdo->rollback();
-        throw $e;
-    }
-
-$stmt -> execute();
-
-// $stmt -> fetchAll();
-
-//while($data = $stmt->fetch()) {
-//    var_dump($data);
-//}
-
-// $allUsers = $stmt -> fetchAll();
-
-// foreach ($allUsers as $user) {
-//    var_dump($user);
-//}
-} */
+?>

@@ -1,17 +1,38 @@
 
 <h1>Bonjour, veuillez vous enregistrer sur Supergoat Hardware! :)</h1>
 
-<form method="post" action="/register">
+<form action="/register" method="post">
 
-    Prénom: <input type="text" name="first_name"><br>
-    Nom: <input type="text" name="last_name"><br>
+    <div class="input-group">
+        <label>Prénom: </label>
+        <input type="text" name="firstname"><br>
+    </div>
 
-    Email: <input type="text" name="email"><br>
+    <div class="input-group">
+        <label>Nom: </label>
+        <input type="text" name="lastname"><br>
+    </div>
 
-    Mot de passe: <input type="password" name="password"><br>
+    <div class="input-group">
+        <label>Email: </label>
+        <input type="text" name="email"><br>
+    </div>
 
-    Téléphone: <input type="text" name="phone"><br>
+    <div class="input-group">
+        <label>Mot de passe: </label>
+        <input type="password" name="password"><br>
+    </div>
 
-    <button type="submit">Envoyer</button>
+    <div class="input-group">
+        <label>Téléphone: </label>
+        <input type="text" name="phone"><br>
+    </div>    
+
+    <div class="input-group">
+        <button type="submit" name="register" class="btn">Envoyer</button>
+    </div>
+
+    <p>Déja membre? <a href="signin_view.php"> Identifiez-vous </a>
+    </p>
 
 </form>
