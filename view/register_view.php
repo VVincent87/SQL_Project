@@ -1,7 +1,10 @@
-
 <h1>Bonjour, veuillez vous enregistrer sur Supergoat Hardware! :)</h1>
 
 <form action="/register" method="post">
+
+    <!-- affichage des erreurs -->
+
+    <?php include('../public/errors.php'); ?>
 
     <div class="input-group">
         <label>Prénom: </label>
@@ -20,7 +23,12 @@
 
     <div class="input-group">
         <label>Mot de passe: </label>
-        <input type="password" name="password"><br>
+        <input type="password" name="password_1"><br>
+    </div>
+
+    <div class="input-group">
+        <label>Répétez le mot de passe: </label>
+        <input type="password" name="password_2"><br>
     </div>
 
     <div class="input-group">
