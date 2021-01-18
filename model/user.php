@@ -44,13 +44,13 @@ function addUser($pdo, $data){
     }
 
     // si pas d'erreurs, enregistrement de l'utilisateur dans la BDD
-    if(count($GLOBALS['errors'] == 0)) {
+    if(empty($GLOBALS['errors'])) {
 
         //cryptage mot de passe
         $passwordhash = password_hash($_POST['password_1'], PASSWORD_BCRYPT); 
         $password = $passwordhash;
 
-        $sql = "
+        $sql = " 
         INSERT INTO client (first_name, last_name, email, password, phone)
         VALUES (:firstname, :lastname, :email, :password, :phone)
         ";
