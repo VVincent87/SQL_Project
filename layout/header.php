@@ -1,10 +1,16 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../public/css/main.css" rel="stylesheet" type="text/css"/>
-    <script src="../public/js/main.js" type="text/javascript"></script>
+    <link href="SQL_Project/public/css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="SQL_Project/public/js/main.js" type="text/javascript"></script>
     <title>Welcome</title>
 </head>
 

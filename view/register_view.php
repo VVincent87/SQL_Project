@@ -8,17 +8,17 @@
 
     <div class="input-group">
         <label>Prénom: </label>
-        <input type="text" name="firstname"><br>
+        <input type="text" name="firstname" value="<?php echo $firstname; ?>"><br>
     </div>
 
     <div class="input-group">
         <label>Nom: </label>
-        <input type="text" name="lastname"><br>
+        <input type="text" name="lastname" value="<?php echo $lastname; ?>"><br>
     </div>
 
     <div class="input-group">
         <label>Email: </label>
-        <input type="text" name="email"><br>
+        <input type="text" name="email" value="<?php echo $email; ?>"><br>
     </div>
 
     <div class="input-group">
@@ -33,7 +33,7 @@
 
     <div class="input-group">
         <label>Téléphone: </label>
-        <input type="text" name="phone"><br>
+        <input type="text" name="phone" value="<?php echo $phone; ?>"><br>
     </div>    
 
     <div class="input-group">

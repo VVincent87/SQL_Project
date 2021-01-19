@@ -2,19 +2,18 @@
 
 <form action="/signin" method="post" >
     
-    <div class="input-group">
-        <label for="firstname">Prénom:</label>
-        <input id="firstname" name="firstname" type="text">
-    </div>    
-    
-    <div class="input-group">
-        <label for="lastname">Nom:</label>
-        <input id="lastname" name="lastname" type="text">
-    </div>
+    <!-- affichage des erreurs -->
+
+    <?php include('../public/errors.php'); ?>
 
     <div class="input-group">
         <label for="email">Email:</label>
         <input id="email" name="email" type="text">
+    </div>
+
+    <div class="input-group">
+        <label>Mot de passe: </label>
+        <input type="password" name="password"><br>
     </div>
 
     <div class="input-group">

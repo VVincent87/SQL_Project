@@ -1,8 +1,11 @@
 <?php
 
+$connected = false; // on définit l'user comme étant non connecté de base
+
 $firstname ='';
 $lastname ='';
 $email ='';
+$password = '';
 $password_1 ='';
 $password_2 ='';
 $phone ='';
@@ -10,7 +13,8 @@ $errors = array();
 
 // défintion de la fonction qui va permettre d'ajouter l'utilisateur à la BDD à partir du register
 
-function addUser($pdo, $data){      
+function addUser($pdo, $data){   
+    
     $firstname = $data['firstname'];
     $lastname = $data['lastname'];
     $email = $data['email'];
@@ -74,10 +78,57 @@ function addUser($pdo, $data){
             throw $e;
         }
 
+        $_SESSION['firstname'] = $firstname;
+        header('location: /signin'); // redirection sur la page signin
     }
 
 }
 
-// function logUser(){};
+function logUser($pdo, $data){
+
+    $password = $data['password'];
+    $email = $data['email'];
+
+    var_dump($data);
+
+    // vérification du remplissage des champs de texte du register 
+    if(empty($email)) {
+        array_push($GLOBALS['errors'], "Merci d'indiquer votre mail"); 
+    }
+    if(empty($password)) {
+        array_push($GLOBALS['errors'], "Merci d'indiquer votre mot de passe"); 
+    }
+
+    // si pas d'erreurs, connexion de l'utilisateur
+    if(empty($GLOBALS['errors'])) {
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT); 
+
+        $sql = " 
+        SELECT password, email FROM client WHERE email = $email
+        ";
+
+        $stmt = $pdo -> prepare($sql);
+
+        $stmt->execute();
+
+        $user = $stmt->fetchAll();
+
+        var_dump($user);
+
+        /* if (password_verify($password, password) && $user->email == $email) {
+            $connected = true;
+            $_SESSION['connected'] = $connected;
+            $_SESSION['firstname'] = $user["firstname"];
+            $_SESSION['lastname'] = $user["lastname"];
+            echo ('Connexion réussie, bienvenue');
+        } else {
+            $_SESSION['connected'] = false;
+            echo ('Erreur d\'identifiants');
+        } */
+
+    var_dump($_SESSION['connected']);
+    }
+
+};
 
 ?>
