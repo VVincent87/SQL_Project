@@ -21,7 +21,3 @@
 </body>
 </html>
 
-<?php
-var_dump(scandir('./')) ;
-var_dump(scandir('./image')) ;
-?>

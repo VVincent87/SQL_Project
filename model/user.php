@@ -56,7 +56,7 @@ function addUser($pdo, $data){
 
         $sql = " 
         INSERT INTO client (first_name, last_name, email, password, phone)
-        VALUES (:firstname, :lastname, :email, :password, :phone)
+        VALUES (:firstname, :lastname, :email, :password, :phone);
         ";
 
         $stmt = $pdo -> prepare($sql);
@@ -104,7 +104,7 @@ function logUser($pdo, $data){
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT); 
 
         $sql = " 
-        SELECT password, email FROM client WHERE email = $email
+        SELECT password, email FROM client WHERE email = $email;
         ";
 
         $stmt = $pdo -> prepare($sql);

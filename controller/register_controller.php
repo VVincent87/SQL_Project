@@ -1,6 +1,6 @@
 <?php
 
-include '../model/user.php';
+//include '../model/user.php';
 
 // quand le bouton register est cliqué
 
