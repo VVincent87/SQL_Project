@@ -20,11 +20,12 @@ body {
     margin: 0.5rem;
 }
 
+
 .navbar-links ul {
     margin: 0;
     padding: 0;
     display: flex;
-    
+
 }
 
 .navbar-links li {
@@ -45,3 +46,9 @@ body {
 }
 
 
+
+#main-image{
+    background: url ('SQL_Project/public/image/goatfire.jpg');
+    height: 500px;
+
+}

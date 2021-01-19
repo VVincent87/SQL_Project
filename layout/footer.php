@@ -35,7 +35,7 @@
             <a href="#">Contact</a>
         </p>
 
-        <p>Company Name &copy; 2015</p>
+        <p>Vic&Jojo &copy; 2077</p>
     </div>
 
 </footer>
