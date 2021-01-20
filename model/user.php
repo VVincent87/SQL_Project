@@ -1,6 +1,5 @@
 <?php
 
-$connected = false; // on définit l'user comme étant non connecté de base
 
 $firstname ='';
 $lastname ='';
@@ -12,8 +11,7 @@ $phone ='';
 $errors = array();
 
 // défintion de la fonction qui va permettre d'ajouter l'utilisateur à la BDD à partir du register
-
-function addUser($pdo, $data){   
+function registerUser($pdo, $data){   
     
     $firstname = $data['firstname'];
     $lastname = $data['lastname'];
@@ -86,10 +84,15 @@ function addUser($pdo, $data){
 
 function logUser($pdo, $data){
 
+// $dsn = 'mysql:dbname=ecom;host=127.0.0.1:3306';
+// $user = 'root';
+// $password = 'root';
+// $option = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
+
+// $pdo = new PDO($dsn, $user, $password, $option);
+
     $password = $data['password'];
     $email = $data['email'];
-
-    var_dump($data);
 
     // vérification du remplissage des champs de texte du register 
     if(empty($email)) {
@@ -111,24 +114,48 @@ function logUser($pdo, $data){
 
         $stmt->execute();
 
-        $user = $stmt->fetchAll();
+        $stmt->fetchAll();
 
-        var_dump($user);
-
-       /* if (password_verify($user->password, $password) && $user->email == $email) {
-            $connected = true;
-            $_SESSION['connected'] = $connected;
-            $_SESSION['firstname'] = $user["firstname"];
-            $_SESSION['lastname'] = $user["lastname"];
-            echo ('Connexion réussie, bienvenue');
-        } else {
-            $_SESSION['connected'] = false;
-            echo ('Erreur d\'identifiants');
-        } */
-
-    var_dump($_SESSION['connected']);
+        // header('location: /home'); // redirection sur la page home
     }
 
 };
+
+function getUser($pdo, $email){
+    $sql = "
+        SELECT *
+        FROM client
+        WHERE email = :email;
+    ";
+
+    $stmt = $pdo->prepare($sql);
+
+    try {
+        $stmt->execute(["email"=> $email]);
+        return $stmt->fetch();
+    } catch (Exception $e){
+        $pdo->rollBack();
+        throw $e;
+    }
+
+}
+
+function getPassword($pdo, $email){
+    $sql = "
+        SELECT password, email
+        FROM client
+        WHERE email = :email;
+    ";
+
+    $stmt = $pdo->prepare($sql);
+
+    try {
+        $stmt->execute(["email"=> $email]);
+        return $stmt->fetch();
+    } catch (Exception $e){
+        $pdo->rollBack();
+        throw $e;
+    }
+}
 
 ?>
