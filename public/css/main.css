@@ -15,10 +15,15 @@ body {
     color: white;
 }
 
-.navbar-title {
+.navbar-title  {
     font-size: 1.5rem;
     margin: 1.5rem;
+    width: auto;
+    
+    
+   
 }
+
 
 .navbar-links ul {
     margin: 0;
@@ -37,6 +42,71 @@ body {
     display: block;
 }
 
+/*Home*/
+
+#main-image{
+  background: url ('https://marketplace-images-production.s3-us-west-2.amazonaws.com/vault/items/preview-55685fd5-1298-426f-a816-7eaa0a141f37-1180x660-f4NKq.jpg ');
+  height: 500px;
+	
+}
+
+#main-image h2
+{
+  
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 150px 0 46px 0;
+	margin-bottom: 20px;
+}
+
+
+.button-1 
+{	
+	display: block;
+	width: 120px;
+	height:50px;
+	background: #61c791;
+	font-size: 20px;
+	color: #fff;
+	margin: 0 auto;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.button-1:hover
+{
+	background: rgb(37, 53, 37);
+}
+
+
+.button-2
+{	
+	display: block;
+	width: 120px;
+	height:50px;
+	background: #61c791;
+	font-size: 20px;
+	color: #fff;
+	margin: 0 auto;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.button-2:hover
+{
+	background: rgb(37, 53, 37);
+}
+
+.container_buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
 
 
 form {
@@ -48,21 +118,18 @@ form {
     border-radius: 0ox 0px 10px 10px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
-* {
-  font-family: Roboto;
-}
 
 section {
   width: 100%;
   display: inline-block;
-  background: #ccc;
   height: 60vh;
   text-align: center;
   font-size: 22px;
   font-weight: 700;
   text-decoration: underline;
+  background: url('../image/goatfire.jpg'); 
+  height: 500px;
 }
 
 .footer-distributed {

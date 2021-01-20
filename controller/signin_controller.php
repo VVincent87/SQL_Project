@@ -1,6 +1,6 @@
 <?php
 
-include '../model/user.php';
+//include '../model/user.php';
 
 $connected = false; // on définit l'user comme étant non connecté de base
 

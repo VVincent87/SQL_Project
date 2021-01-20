@@ -17,7 +17,10 @@ session_start();
 
 <body>
       <nav class="navbar">
-          <div class="navbar-title">SuperGoat Hardware</div>
+          <div class="navbar-title">
+             
+              <img src=public\image\Supergoat.jpg>
+          </div>
           <div class="navbar-links">
             <ul>
                  <li><a href="/">Home</a></li>

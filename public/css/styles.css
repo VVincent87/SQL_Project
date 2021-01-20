@@ -20,11 +20,12 @@ body {
     margin: 0.5rem;
 }
 
+
 .navbar-links ul {
     margin: 0;
     padding: 0;
     display: flex;
-    
+
 }
 
 .navbar-links li {
