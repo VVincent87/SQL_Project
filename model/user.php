@@ -115,7 +115,7 @@ function logUser($pdo, $data){
 
         var_dump($user);
 
-        /* if (password_verify($password, password) && $user->email == $email) {
+       /* if (password_verify($user->password, $password) && $user->email == $email) {
             $connected = true;
             $_SESSION['connected'] = $connected;
             $_SESSION['firstname'] = $user["firstname"];

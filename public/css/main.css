@@ -16,6 +16,7 @@ body {
 }
 
 .navbar-title  {
+   
     font-size: 1.5rem;
     margin: 1.5rem;
     width: auto;
@@ -45,15 +46,16 @@ body {
 /*Home*/
 
 #main-image{
-  background: url ('https://marketplace-images-production.s3-us-west-2.amazonaws.com/vault/items/preview-55685fd5-1298-426f-a816-7eaa0a141f37-1180x660-f4NKq.jpg ');
+  background-image: url('SQL_Project/public/image/goatfire.jpg') no-repeat center ;
   height: 500px;
 	
 }
 
 #main-image h2
 {
-  
-	font-weight: normal;
+  color: rgb(24, 21, 19);
+  text-decoration: none;
+	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
 	padding: 150px 0 46px 0;

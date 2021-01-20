@@ -18,14 +18,14 @@ session_start();
 <body>
       <nav class="navbar">
           <div class="navbar-title">
-             
-              <img src=public\image\Supergoat.jpg>
+              <img src="SQL_Project/public/image/Supergoat.jpg" alt="SGlogo" width='200'>
           </div>
           <div class="navbar-links">
             <ul>
                  <li><a href="/">Home</a></li>
                  <li><a href="signin">Sign In</a></li>
                  <li><a href="register">Register</a></li>
+                 <li><a href="/">Deconnexion</a></li>
             </ul>
           </div>
        </nav>     
