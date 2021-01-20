@@ -3,6 +3,7 @@
 }
 
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -40,10 +41,15 @@ body {
     display: block;
 }
 
+.categories {
+  display: flex;
+  justify-content: space-around;
+}
+
 /*Home*/
 
 #main-image{
-  background-image: url('SQL_Project/public/image/goatfire.jpg') no-repeat center ;
+  background: url('https://i.ytimg.com/vi/-qwJ9R8m5OE/maxresdefault.jpg');
   height: 500px;
 }
 

@@ -10,14 +10,25 @@
     <script src="SQL_Project/public/js/main.js" type="text/javascript"></script>
     <title>SuperHomepage</title>
 </head>
-<body>
+
+    <body>
     
-			<section id="main-image">
+    <div class='categories'>
+        <a href="produit?id=1">PC portables</a>
+        <a href="produit?id=2">PC desktop</a>
+        <a href="produit?id=3">Ecrans</a>
+        <a href="produit?id=4">Peripheriques</a>
+        <a href="produit?id=5">Soutien la super chèvre!</a>
+    </div>	
+
+        <section id="main-image">
                 <h2>Welcome Madafak! <br><strong></strong>Already registered?! </h2>
                     <div class="container_buttons"><a href="http://localhost:81/signin" class="button-1">Yeah!</a>	
                         <a href="http://localhost:81/register" class="button-2">Nope!</a>	
                     </div>  
-			</section>
+            </section>
+            
+
 </body>
 </html>
 
