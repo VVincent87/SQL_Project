@@ -84,13 +84,6 @@ function registerUser($pdo, $data){
 
 function logUser($pdo, $data){
 
-// $dsn = 'mysql:dbname=ecom;host=127.0.0.1:3306';
-// $user = 'root';
-// $password = 'root';
-// $option = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
-
-// $pdo = new PDO($dsn, $user, $password, $option);
-
     $password = $data['password'];
     $email = $data['email'];
 
@@ -102,7 +95,7 @@ function logUser($pdo, $data){
         array_push($GLOBALS['errors'], "Merci d'indiquer votre mot de passe"); 
     }
 
-    // si pas d'erreurs, connexion de l'utilisateur
+    // si pas d'erreurs, hash du password
     if(empty($GLOBALS['errors'])) {
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT); 
 
@@ -116,7 +109,6 @@ function logUser($pdo, $data){
 
         $stmt->fetchAll();
 
-        // header('location: /home'); // redirection sur la page home
     }
 
 };

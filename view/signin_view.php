@@ -11,7 +11,7 @@
 
 <h1>Salut cher membre! Merci de t'identifier :)</h1>
 
-<form action="/signin" method="post" >
+<form action="/" method="post" >
     
     <!-- affichage des erreurs -->
 

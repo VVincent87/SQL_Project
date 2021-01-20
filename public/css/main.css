@@ -20,9 +20,6 @@ body {
     font-size: 1.5rem;
     margin: 1.5rem;
     width: auto;
-    
-    
-   
 }
 
 
@@ -48,7 +45,6 @@ body {
 #main-image{
   background-image: url('SQL_Project/public/image/goatfire.jpg') no-repeat center ;
   height: 500px;
-	
 }
 
 #main-image h2
