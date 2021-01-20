@@ -13,7 +13,7 @@
 <body>
     
 			<section id="main-image">
-                <h2>Welcome Madafak! <br><strong></strong>Are you already registered?! </h2>
+                <h2>Welcome Madafak! <br><strong></strong>Already registered?! </h2>
                     <div class="container_buttons"><a href="http://localhost/signin" class="button-1">Yeah!</a>	
                         <a href="http://localhost/register" class="button-2">Nope!</a>	
                     </div>  

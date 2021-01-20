@@ -19,8 +19,7 @@ session_start();
       <nav class="navbar">
           <div class="navbar-title">
              
-              <img src=https://marketplace-images-production.s3-us-west-2.amazonaws.com/vault/items/preview-55685fd5-1298-426f-a816-7eaa0a141f37-1180x660-f4NKq.jpg alt="SGlogo" width="150"> 
-             
+              <img src=public\image\Supergoat.jpg>
           </div>
           <div class="navbar-links">
             <ul>
