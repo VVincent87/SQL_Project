@@ -21,7 +21,6 @@
 
         <?php include('../public/errors.php'); ?>
 
-<div class = "display-flex">
         <div class="input-group">
             <label>Prénom: </label>
             <input type="text" name="firstname"><br>
@@ -52,13 +51,11 @@
             <input type="text" name="phone"><br>
         </div>    
 
-</div>
-
         <div class="input-group">
             <button type="submit" name="register" class="btn">Envoyer</button>
         </div>
 
-        <p>Déja membre? <a href="signin_view.php"> Identifiez-vous </a>
+        <p>Déja membre? <a href="/signin"> Identifiez-vous </a>
         </p>
 
 </form>

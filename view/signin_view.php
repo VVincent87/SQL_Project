@@ -11,7 +11,7 @@
 
 <h1>Salut cher membre! Merci de t'identifier :)</h1>
 
-<form action="/" method="post" >
+<form action="/signin" method="post" >
     
     <!-- affichage des erreurs -->
 
@@ -31,7 +31,7 @@
         <button type="submit" class="btn">Envoyer</button>
     </div>
     
-    <p>Pas encore membre? <a href="register_view.php"> Enregistrez-vous! </a></p>
+    <p>Pas encore membre? <a href="/register"> Enregistrez-vous! </a></p>
 
 </form>
 
